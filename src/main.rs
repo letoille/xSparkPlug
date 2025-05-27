@@ -6,11 +6,11 @@ use tracing_subscriber::{Layer, Registry, fmt, layer::SubscriberExt, util::Subsc
 
 fn main() {
     let filter = Targets::new()
-        .with_target("xspb", Level::INFO)
+        .with_target("xSparkplug", Level::INFO)
         .with_target("application", Level::INFO)
         .with_target("edge", Level::INFO);
 
-    let file_appender = tracing_appender::rolling::daily("logs", "xspb.log");
+    let file_appender = tracing_appender::rolling::daily("logs", "xsp.log");
     let (nb, _guard) = tracing_appender::non_blocking(file_appender);
     let file_layer = fmt::layer()
         .with_ansi(false)

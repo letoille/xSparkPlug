@@ -1585,7 +1585,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "xspb"
+name = "xSparkplug"
 version = "0.1.0"
 dependencies = [
  "prost",
